@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Visualization of Journey to the West</title>
+    <link href="favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/textures@1.2.0/dist/textures.js"></script>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script> -->
+    <script type="text/javascript" src="echarts.js"></script>
+
+    <script type="text/javascript" src="test/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="map_bar.js"></script>
+    <script type="text/javascript" src="scatter_bar.js"></script>
+    <script type="text/javascript" src="ecStat.min.js"></script>
+    <script type="text/javascript" src="line_regression.js"></script>
+    <script type="text/javascript" src="line_regression_f.js"></script>
+    <script type="text/javascript" src="score_rank.js"></script>
+    <script type="text/javascript" src="rosetype.js"></script>
+    <script type="text/javascript" src="works_classification.js"></script>
+    <script type="text/javascript" src="sankey.js"></script>
+    <script type="text/javascript" src="sankey_movie.js"></script>
+    <script type="text/javascript" src="modelnetwork.js"></script>
+    <script type="text/javascript" src="modelpaopao.js"></script>
+    <script type="text/javascript" src="rader_time.js"></script>
+    <script type="text/javascript" src="train_pie.js"></script>
+
+    <script type="text/javascript" src="altitude_chart.js"></script>
+
+</head>
+<body>
+
+    <img src="img/头图.png" style="width:100%;"></img>
+    </div>
+    <div style="clear: both; margin-bottom: 0px; color:white;font-size:20px">
+        <p>
+            <span style="font-size: 32px;"> In 2024</span>, China's first 3A game "Black Myth: Wukong" was released and received widespread acclaim, and won Golden Joystick Awards of the Year in November. The game is based on the Chinese classical novel "Journey to the West" and has also sparked the interest of gamers from many countries in the novel. This work is based on the novel and visualizes the plot from a data perspective. Tang Monk and his disciples conquered demons and monsters along the way, enduring 81 difficulties, and finally retrieved the true scriptures. Let's take a detailed look at Tang Monk and his disciples' route to obtain the scriptures, as well as the dangers they encountered and the immortals they encountered along the way.
+        </p>
+
+
+        <h1>The Team Continues to Grow and Expand</h1>
+
+        <p>Tang Monk shouldered the heavy trust of the Tang Dynasty emperor and embarked on a long journey of traveling to obtain Buddhist scriptures. After overcoming numerous obstacles, the team that went to obtain the scriptures continued to grow, gradually joining Wukong, Bajie, and Sha Monk to form a four person team led by Tang Monk.</p>
+        <p>Display the place names of the routes taken during the process of obtaining the scriptures in order, and use the icons of Tang Monk and his disciples to represent the increasing number of people passing through these place names. Tang Monk successively subdued Sun Wukong at Wuxing Mountain, Zhu Bajie at Gaolao Village, and Sha Monk at Liusha River. The four disciples experienced most of the journey of obtaining the scriptures together. (Drag the progress bar below to view more places)</p>
+        <div class="graphlayout_m">
+            <div id="map_bar" style="text-align: center; padding-left:4%;width:85%;height:100%; "></div>
+            <div id="handle_map_bar" style="text-align: center;">
+            </div>
+        </div>
+        <p></p>
+        <h1>The Arduous and Tortuous Process</h1>
+        <p>The journey of Tang Monk and his disciples to obtain the scriptures began in Chang'an, Tang Dynasty, and finally arrived at Thunderclap Monastery in India to obtain the scriptures. This journey happened to circle around the Qinghai Tibet Plateau for a long distance. In addition to the distance, the altitude changes of the places where the team passed through allowed for a more vivid experience of the hardships of crossing mountains and valleys.<br><br>The places mentioned in the novel "Journey to the West" can be traced back to the present day. The starting point is Chang'an in the Tang Dynasty, which is now Xi'an. The Two-boundary Mountains is roughly located in Linxia, Shepan Mountain is now Wushaoling, Futu Mountain is now the Altun Mountains, Huangfeng Ridge is roughly located in the Hashun Desert, Liusha River is roughly located in Lop Nur, Baoxiang Kingdom is now Yanqi County, Wuji Kingdom is now Kuche County, Hao Mountain is now Tomur Peak, Black River is now Issyk Kul Lake, Chechi Kingdom is now Tashkent in Uzbekistan, Jinqian Mountain is now the Buzgala Pass in Uzbekistan, and Jisai Kingdom is now Mazar-i-Sharif in Afghanistan. Minor Western Heaven is now Bamiyan in Afghanistan, where there is a world-famous Bamiyan Buddha, Zhuzi Kingdom is located in the Kabul River Basin of present-day Afghanistan, Lion Camel Kingdom is roughly located in the Swat River Valley of northwestern Pakistan, Bhikkhu Kingdom is located in the present-day Kashmir region, Miefa Kingdom is roughly located in the Punjab region of Pakistan, Fengxian County is located in the Rozpur region of present-day India, and the final destination is Thunderclap Monastery in India, which is now Nalanda.</p>
+        <div class="graphlayout_m">
+            <div id="altitude_chart" style="text-align: center; padding-left:2%;width:95%;height:100%; "></div>
+            <div id="handle_altitude_chart" style="text-align: center;">
+            </div>
+        </div>
+        <div style="padding-top: 0px; padding-bottom: 0px;">
+            <div style="display: inline-block; width:55%; padding-left:2%; text-align: center;vertical-align:top; color:grey; font-size:14px">
+                <img src="img/wordcloud.png" style="padding-top: 30px;width:100%;"></img>
+            </div>
+            <div style="padding-top: 10px; display: inline-block; width:35%; padding-left:0%; vertical-align:left">
+                <p> </p>
+                <p>Let's take a look at the data analysis of 81 difficulties again. The cloud map of the places shows that Tang Monk and his disciples encountered more difficulties in places such as Lion Camel Cave, Women's Kingdom, Chechi Kingdom, Jinqian Mountain, Huoyun Cave, Tongtian River, etc.</p></div>
+            <div style="clear:both"></div>
+        </div>
+        <p>According to the seasonal statistics of the difficulties encountered by Tang Monk and his disciples in the novel "Journey to the West", it can be seen that the journey of obtaining Buddhist scriptures not only repeats itself in times of difficulty, but also in the four seasons. Among them, the number of difficulties that occur in spring and autumn is relatively high.<br><br>This inevitably reminds people of the line from the ending song of the 1986 version of the TV drama "Journey to the West" called "Dare to Ask Where the Road is": "Through spring and autumn, winter and summer, sweet and sour, bitter and spicy, dare to ask where the road is, the road is under your feet". The essence of the novel "Journey to the West" lies in the cycle and repetition of difficulties, which are both the same and different. Like a musical canon, it is firm, persistent, and sublimated in the cycle and repetition.</p>
+        <div class="graphlayout">
+            <div id="rosetype" style="text-align: center; padding-left:2%;width:95%;height:100%; "></div>
+            <div id="handle_altitude_chart" style="text-align: center;">
+            </div>
+        </div>
+
+        <p>
+            In the numerous difficulties on the journey to obtain Buddhist scriptures, Tang Monk and his disciples encountered many gods/Buddhas, humans, and monsters. The number of gods/ Buddhas, humans, and monsters encountered by the four disciples at each place is represented by a line chart, and the proportion of each character encountered at each place is displayed through a pie chart (hovering over the line chart displays the corresponding pie chart proportion).<br><br>We can see that overall, there are still more gods/Buddhas than monsters, just like there are always more solutions than difficulties in life. With a bit of effort, we can always overcome them.
+        </p>
+        <div class="graphlayout">
+            <div id="scatter_bar" style="text-align: center; width:100%;height:100%; "></div>
+            <div id="handle_scatter_bar" style="text-align: center;">
+            </div>
+        </div>
+
+        <p>
+            We will sort the locations where Tang Monk and his disciples encountered difficulties by time as the horizontal axis, and represent the number of difficulties and monsters separately using bubble charts. It is not difficult to see that the more monsters there are, the corresponding number of difficulties is relatively higher, and several larger bubbles are relatively evenly distributed during the process of obtaining scriptures.<br><br>In the process of overcoming these difficulties, sometimes it is necessary to defeat the enemy, and sometimes it is necessary to defeat oneself, such as Tang Monk's experience in the women's kingdom.<br><br>Is it harder to defeat the enemy or to defeat oneself? Perhaps everyone has different answers in their hearts. In different situations, both are tests that each of us needs to face.</p>
+        
+        <div class="graphlayout">
+            <div id="modelpaopao" style="text-align: center; padding-left:7%; width:85%;height:100%; "></div>
+            <div id="handle_modelpaopao" style="text-align: center;">
+            </div>
+        </div>
+
+        <h1>Both Buddhas and Monsters on the Way to Obtain Scriptures</h1>
+
+        <p>Sorting out the relationships between the main characters in Journey to the West, the larger the circles corresponding to the characters with more relationships, and the four different colors representing Tang Monk's team, gods and Buddhas, humans, and monsters.(You can hover the mouse over the dots and lines in the network diagram to view character details and relationships.)
+        </p>
+        <div class="graphlayout_h">
+            <div id="modelnetwork" style="padding-left:10%; width:80%;height:100%; "></div>
+            <div id="handle_modelnetwork" style="text-align: center;">
+            </div>
+        </div>
+        
+
+        <p>The monsters with names in Journey to the West can be classified according to their different backgrounds, including: no background, Ling Mountain background, Taoist background, immortal background, mount descended to human world, pet descended to human world, etc. Visualizing the proportion data of several categories, it can be seen that monsters without backgrounds have the highest proportion, followed by Ling Mountain backgrounds.
+        </p>
+        <div class="graphlayout">
+            <div id="train_pie" style="text-align: center; padding-left:4%;width:90%;height:100%; "></div>
+            <div id="handle_train_pie" style="text-align: center;">
+            </div>
+        </div>
+        <p>Except for the first category without background, the other categories can be considered as having background.</p>
+        <p>Monsters with backgrounds are more likely to survive compared to those without backgrounds. Among the monsters that are killed, only two has backgrounds (Ling Mountain background and Taoist background), while the rest had no background<br>Upon further analysis of the ultimate fate of different types of monsters, we can see that male monsters are more likely to survive, with a significantly higher proportion of living males than females in the total number of monsters. This is more or less related to the ancient idea of male superiority and female inferiority, which assumes that male monsters have stronger combat power and are less likely to be killed.</p>
+        <div class="graphlayout">
+            <div id="sankey" style="padding-left:10%; width:90%;height:90%; "></div>
+            <div id="handle_sankey" style="text-align: center;">
+            </div>
+        </div>
+        <h1>Translation of the Novel "Journey to the West"<br>and Related Film & Television Works</h1>
+        <p>The prototype of Tang Monk in the novel Journey to the West is Master Xuanzang, and the story prototype of the novel is the magnificent story of Xuanzang, an eminent monk of the Tang Dynasty, seeking and promoting Dharma on today's "the Belt and Road" Silk Road. During the spread of the story for more than 400 years, the novel Journey to the West has been widely spread in the "the Belt and Road" countries, and has been translated into 16 languages with up to 60 novel versions.<br>The brilliant artistic imagination, distinctive characters, and dramatic plot in Journey to the West are highly praised by people in Buddhist popular regions such as East Asia, Southeast Asia, and South Asia, and widely accepted by countries and people in Central Asia, Central and Eastern Europe.</p>
+        <div style="text-align: center;width: 100%; height: 100%;">
+        <iframe src="https://dycharts.com/xshow/index.html?id=c_ea006a23cf16696a55e72f65b1e3e0cb" width="900" height="385" scrolling="no" frameborder="0" align=""></iframe>
+        </div>
+        <p>So far, there have been over a hundred related film and television works based on the novel "Journey to the West", with screenings, broadcasts, and performances covering multiple countries and regions. It can be said that "Journey to the West" is a widely popular work in world literature.<br>Summarize the data of rated film and television works on douban.com for analysis. The two highest rated works are the 1986 TV series "Journey to the West" and the 1961 animated series "Monkey King". After time, works with a rating of 9 or above are all classics.</p>
+        <div class="graphlayout">
+            <div id="score_rank" style="text-align: center;padding-left:5%; width:85%;height:100%; "></div>
+            <div id="handle_score_rank" style="text-align: center;">
+            </div>
+        </div>
+        <p>According to the statistical classification of rated film and television works on Douban.com, it can be seen that besides China, many countries such as Japan, South Korea, and some countries in Europe and America have also released and broadcasted film and television works related to the novel "Journey to the West". (Click on the blocks in the rising sun image to view subcategories, and click on the center area to return to the parent category)</p>
+        <div class="graphlayout">
+            <div id="works_classification" style="text-align: center;padding-left:10%; width:75%;height:140%; "></div>
+            <div id="handle_works_classification" style="text-align: center;">
+            </div>
+        </div>
+        <p><br><br><br><br>Classifying these film and television works by era, country, and genre, and presenting them using Sankey diagrams, it can be seen that there has been a significant output of film and television works related to the novel "Journey to the West" in the past 20 years.<br>Among the film and television works related to "Journey to the West" filmed abroad, Japan has a relatively large number of productions, with an earlier start time and a longer time span, indicating that the novel "Journey to the West" and the culture of "Journey to the West" are particularly popular in Japan.</p>
+        <div class="graphlayout">
+            <div id="sankey_movie" style="padding-left:10%; width:90%;height:90%; "></div>
+            <div id="handle_sankey_movie" style="text-align: center;">
+            </div>
+        </div>
+        <p>Summarize the production year and the highest score data of domestic TV series/movies in that year into a scatter plot, and fit the score trend line. It can be seen that both TV series and movies have a decreasing trend in scores over time.<br>We located the highest and lowest scores on two separate graphs, and it is not difficult to see that the classic works with the highest scores appeared in the early stages.<br>Meanwhile, the distribution of movie scores is more scattered, ranging from 2.5 to 9.4 points.</p>
+        <div class="graphlayout">
+            <div id="line_regression" style="text-align: center; width:90%;height:90%; "></div>
+            <div id="handle_line_regression" style="text-align: center;">
+            </div>
+        </div>
+        <div class="graphlayout">
+            <div id="line_regression_f" style="text-align: center; width:90%;height:90%; "></div>
+            <div id="handle_line_regression_f" style="text-align: center;">
+            </div>
+        </div>
+            <div style="display:block; clear: both; margin-bottom: 100px; color:white;">
+                <h1>Epilogue</h1>
+                <p>
+                    After going through 81 difficulties, Tang Monk and his disciples finally obtained the true scripture. "81" is just a symbolic number, just like the song "Overcome obstacles to become a great road, overcome difficulties and set off again". Life is a journey of facing, crossing, bidding farewell, gaining insights, and overcoming difficulties. Facing the next difficulty, may we all have the same courage and determination, and set off again and again.<br>The story of Journey to the West is constantly being translated, adapted, and rewritten into works of various ethnic languages. Writers from different countries use various genres to interpret it. Today, various modern art forms such as movies, television, anime, and games are still drawing nourishment from Journey to the West, constantly bringing profound inspiration and insights to the world.
+                </p>
+                <h2>Reference</h2>
+                <p style=" padding-top: 10px;font-size:18px">1. The novel "Journey to the West"
+                    <br>2. Douban.com
+                    <br>3. The Long "Journey to the West" Road of Journey to the West (New Literary Observation · Four Masterpieces on the "the Belt and Road")(in Chinese)
+                </p>
+                <h2>Author</h2>
+                <p style=" padding-top: 10px;font-size:18px">Xiaoyu Qi, from Big Data Research and Application Innovation Center of Railway, Beijing, China
+                </p>
+        
+                
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <script>
+            draw_mapbar();
+            draw_altitudechart();
+            draw_rosetype();
+            draw_trainpie();
+            draw_scatterbar();
+            draw_lineregression();
+            draw_lineregression_f();
+            draw_score_rank();
+            draw_works_classification();
+            draw_sankey();
+            draw_sankey_movie();
+            draw_modelnetwork();
+            modelpaopao();
+            draw_radertime();
+            draw_trainpie();
+        </script>
+
+</body>
+
+</html>
