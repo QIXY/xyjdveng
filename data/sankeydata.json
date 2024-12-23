@@ -1,0 +1,29 @@
+{"nodes": [
+      
+      {"name": "pet descended to human world"},
+      {"name": "Taoist background"},
+      {"name": "Ling Mountain background"},
+      {"name": "immortal background"},
+      {"name": "no background"},
+      {"name": "mount descended to human world"},
+      {"name": "male"},
+      {"name": "female"},
+      {"name": "alive"},
+      {"name": "dead"}
+   ],
+   "links": [
+     
+{"source":"pet descended to human world","target":"alive","value":1},
+{"source":"Taoist background","target":"alive","value":2},
+{"source":"Taoist background","target":"dead","value":1},
+{"source":"Ling Mountain background","target":"alive","value":9},
+{"source":"Ling Mountain background","target":"dead","value":1},
+{"source":"immortal background","target":"alive","value":2},
+{"source":"no background","target":"alive","value":10},
+{"source":"no background","target":"dead","value":26},
+{"source":"mount descended to human world","target":"alive","value":2},
+{"source":"alive","target":"female","value":4},
+{"source":"dead","target":"female","value":7},
+{"source":"alive","target":"male","value":22},
+{"source":"dead","target":"male","value":21}
+   ]}
